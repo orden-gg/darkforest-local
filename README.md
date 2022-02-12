@@ -24,13 +24,13 @@ Yarn places all of the packages for each submodule in the top level `node_module
 3. Switch to default branches:
     - The `darkforest-local` monorepo detaches the submodules from their current HEADs. If you want to save your changes (for example, if you're testing an new contract in `eth`), you'll need to make a new branch in these submodules.
     1. `cd eth`
-        1. `git checkout -b orden-eth`
+        1. `git checkout orden-eth`
     2. `cd client`
-        1. `git checkout -b orden-client`
+        1. `git checkout orden-client`
     3. `cd circuits`
-        1. `git checkout -b orden-circuits`
+        1. `git checkout orden-circuits`
     4. `cd packages`
-        1. `git checkout -b orden-packages`
+        1. `git checkout orden-packages`
 7. Install packages and dependencies
     * `yarn`
 8. Start a game
