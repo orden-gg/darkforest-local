@@ -19,44 +19,26 @@ Yarn places all of the packages for each submodule in the top level `node_module
 * Install `node >= 14` (You can consider using [nvm](https://github.com/nvm-sh/nvm))
 * Install [Yarn](https://classic.yarnpkg.com/en/docs/install)
 
-### Quickstart for running a local game
-1. Fork [darkforest-local](https://github.com/projectsophon/darkforest-local) to your GitHub account
-2. `git clone --recurse-submodules https://github.com/<your_name>/darkforest-local.git`
-3. If you didn't clone with `--recurse-submodules` or already have a cloned version: `git submodule update --init --recursive --remote --merge`
-4. `yarn`
-5. `yarn start`
-
-### If you plan to make changes to `darkforest-local`
-1. Fork [darkforest-local](https://github.com/projectsophon/darkforest-local) to your GitHub account
-2. Fork [darkforest-eth/eth](https://github.com/darkforest-eth/eth) to your GitHub account
-3. Fork [darkforest-eth/client](https://github.com/darkforest-eth/client) to your GitHub account
-4. Fork [darkforest-eth/circuits](https://github.com/darkforest-eth/circuits) to your GitHub account
-5. Fork [darkforest-eth/packages](https://github.com/darkforest-eth/packages) to your GitHub account
-4. Clone your darkforest-local repo: `git clone https://github.com/<your_name>/darkforest-local.git`
-5. Update the `.gitmodules` file to point to your new forks of `eth`, `client`, `circuits`, and `packages` 
-    ex: 
-    * `url = https://github.com/darkforest-eth/eth` => `url = https://github.com/cha0sg0d/eth`
-    * `url = https://github.com/darkforest-eth/client` => `url = https://github.com/cha0sg0d/client`
-    * `url = https://github.com/darkforest-eth/circuits` => `url = https://github.com/cha0sg0d/circuits`
-    * `url = https://github.com/darkforest-eth/packages` => `url = https://github.com/cha0sg0d/packages`
-6. Fetch the code from the submodules
-    * `git submodule update --init --recursive`   
-7. Add new branches for developing:
+### Rocket Launch
+1. Clone the repo
+    * `git clone git@github.com:orden-gg/darkforest-local.git`
+2. Fetch the code from the submodules
+    * `git submodule update --init --recursive` 
+3. Switch to default branches:
     - The `darkforest-local` monorepo detaches the submodules from their current HEADs. If you want to save your changes (for example, if you're testing an new contract in `eth`), you'll need to make a new branch in these submodules.
     1. `cd eth`
-        1. `git checkout -b <new_name>`
+        1. `git checkout eth-rpg`
     2. `cd client`
-        1. `git checkout -b <new_name>`
+        1. `git checkout client-rpg`
     3. `cd circuits`
-        1. `git checkout -b <new_name>`
+        1. `git checkout circuits-rpg`
     4. `cd packages`
-        1. `git checkout -b <new_name>`
+        1. `git checkout packages-rpg`
 7. Install packages and dependencies
     * `yarn`
 8. Start a game
     * `yarn start`
-
-            
+    
 ## Run a local game
 
 - Running `yarn start`, will 1) start a local node, 2) deploy the contracts, and 3) run the local client in dev mode

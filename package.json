@@ -28,6 +28,8 @@
     "test": "yarn workspaces run test",
     "lint": "yarn workspaces run lint",
     "format": "yarn workspaces run format",
+    "whitelist:dev": "yarn workspace eth hardhat:dev whitelist-nokey:register --path whitelist_addresses.txt",
+    "whitelist:prod": "yarn workspace eth hardhat:prod whitelist-nokey:register --path whitelist_addresses.txt",
     "deploy:contracts": "yarn workspace eth hardhat:dev deploy --whitelist false",
     "deploy:client": "netlify build && netlify deploy",
     "deploy:client:prod": "netlify build && netlify deploy --prod",
